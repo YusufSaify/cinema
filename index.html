@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="app.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Whisper&display=swap"
+        rel="stylesheet">
+
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"> -->
+    <title>SearchShows</title>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="left">
+            <p>
+                सिनेमा </p>
+        </div>
+        <div class="massage"> </div>
+        <div class="right">
+            <form id="searchForm">
+                <input type="text" placeholder="Search here ..." name="query" id="query">
+
+            </form>
+        </div>
+    </div>
+
+    <div class="imgs">
+
+        <div class="eachShowDiv" style="--color:rgb(204, 102, 145);">
+            <img class="poster" src="https://static.tvmaze.com/uploads/images/medium_portrait/486/1216872.jpg">
+            <div class="detailsDiv" onclick="goto('https://www.tvmaze.com/shows/56475/masterchef-india')">
+                <p class="titleName"><span>NAME</span><br>MasterChef India</p>
+
+                <p class="language"><span>LANGUAGE</span><br>Hindi</p>
+                <p class="language"><a href="https://www.tvmaze.com/shows/56475/masterchef-india"
+                        target="_blank">OFFICIAL SITE </a><br></p>
+            </div>
+        </div>
+
+        <div class="eachShowDiv" style="--color:rgb(110, 102, 204);">
+            <img class="poster" src="https://static.tvmaze.com/uploads/images/medium_portrait/145/364366.jpg">
+            <div class="detailsDiv" onclick="goto('https://www.tvmaze.com/shows/34853/wildest-india')">
+                <p class="titleName"><span>NAME</span><br>Wildest India</p>
+
+                <p class="language"><span>LANGUAGE</span><br>English</p>
+                <p class="language"><a href="https://www.tvmaze.com/shows/34853/wildest-india" target="_blank">OFFICIAL
+                        SITE </a><br></p>
+            </div>
+        </div>
+
+        <div class="eachShowDiv" style="--color:rgb(204, 180, 102);">
+            <img class="poster" src="https://static.tvmaze.com/uploads/images/medium_portrait/125/313407.jpg">
+            <div class="detailsDiv" onclick="goto('https://www.tvmaze.com/shows/31410/floyds-india')">
+                <p class="titleName"><span>NAME</span><br>Floyd's India</p>
+
+                <p class="language"><span>LANGUAGE</span><br>English</p>
+                <p class="language"><a href="https://www.tvmaze.com/shows/31410/floyds-india" target="_blank">OFFICIAL
+                        SITE </a><br></p>
+            </div>
+        </div>
+
+        <div class="eachShowDiv" style="--color:rgb(204, 179, 102);">
+            <img class="poster" src="https://static.tvmaze.com/uploads/images/medium_portrait/114/285595.jpg">
+            <div class="detailsDiv" onclick="goto('https://www.tvmaze.com/shows/26244/hidden-india')">
+                <p class="titleName"><span>NAME</span><br>Hidden India</p>
+
+                <p class="language"><span>LANGUAGE</span><br>English</p>
+                <p class="language"><a href="https://www.tvmaze.com/shows/26244/hidden-india" target="_blank">OFFICIAL
+                        SITE </a><br></p>
+            </div>
+        </div>
+
+        <div class="eachShowDiv" style="--color:rgb(102, 188, 204);">
+            <img class="poster" src="https://static.tvmaze.com/uploads/images/medium_portrait/106/265384.jpg">
+            <div class="detailsDiv" onclick="goto('https://www.tvmaze.com/shows/26900/hotel-india')">
+                <p class="titleName"><span>NAME</span><br>Hotel India</p>
+
+                <p class="language"><span>LANGUAGE</span><br>English</p>
+                <p class="language"><a href="https://www.tvmaze.com/shows/26900/hotel-india" target="_blank">OFFICIAL
+                        SITE </a><br></p>
+            </div>
+        </div>
+
+        <div class="eachShowDiv" style="--color:rgb(102, 176, 204);">
+            <img class="poster" src="https://static.tvmaze.com/uploads/images/medium_portrait/114/287044.jpg">
+            <div class="detailsDiv" onclick="goto('https://www.tvmaze.com/shows/28809/exciting-india')">
+                <p class="titleName"><span>NAME</span><br>Exciting India</p>
+
+                <p class="language"><span>LANGUAGE</span><br>Korean</p>
+                <p class="language"><a href="https://www.tvmaze.com/shows/28809/exciting-india" target="_blank">OFFICIAL
+                        SITE </a><br></p>
+            </div>
+        </div>
+
+        <div class="eachShowDiv" style="--color:rgb(102, 169, 204);">
+            <img class="poster" src="https://static.tvmaze.com/uploads/images/medium_portrait/506/1266176.jpg">
+            <div class="detailsDiv" onclick="goto('https://www.tvmaze.com/shows/56668/shark-tank-india')">
+                <p class="titleName"><span>NAME</span><br>Shark Tank India</p>
+
+                <p class="language"><span>LANGUAGE</span><br>Hindi</p>
+                <p class="language"><a href="https://www.tvmaze.com/shows/56668/shark-tank-india"
+                        target="_blank">OFFICIAL SITE </a><br></p>
+            </div>
+        </div>
+
+        <div class="eachShowDiv" style="--color:rgb(113, 102, 204);">
+            <img class="poster" src="https://static.tvmaze.com/uploads/images/medium_portrait/126/315751.jpg">
+            <div class="detailsDiv" onclick="goto('https://www.tvmaze.com/shows/26170/joanna-lumleys-india')">
+                <p class="titleName"><span>NAME</span><br>Joanna Lumley's India</p>
+                <p class="language"><span>Genres</span><br>6.8</p>
+                <p class="language"><span>LANGUAGE</span><br>English</p>
+                <p class="language"><a href="https://www.tvmaze.com/shows/26170/joanna-lumleys-india"
+                        target="_blank">OFFICIAL SITE </a><br></p>
+            </div>
+        </div>
+
+        <div class="eachShowDiv" style="--color:rgb(102, 156, 204);">
+            <img class="poster" src="https://static.tvmaze.com/uploads/images/medium_portrait/22/56551.jpg">
+            <div class="detailsDiv" onclick="goto('https://www.tvmaze.com/shows/5581/rick-steins-india')">
+                <p class="titleName"><span>NAME</span><br>Rick Stein's India</p>
+
+                <p class="language"><span>LANGUAGE</span><br>English</p>
+                <p class="language"><a href="https://www.tvmaze.com/shows/5581/rick-steins-india"
+                        target="_blank">OFFICIAL SITE </a><br></p>
+            </div>
+        </div>
+
+        <div class="eachShowDiv" style="--color:rgb(123, 204, 102);">
+            <img class="poster" src="https://static.tvmaze.com/uploads/images/medium_portrait/486/1216872.jpg">
+            <div class="detailsDiv" onclick="goto('https://www.tvmaze.com/shows/56475/masterchef-india')">
+                <p class="titleName"><span>NAME</span><br>MasterChef India</p>
+
+                <p class="language"><span>LANGUAGE</span><br>Hindi</p>
+                <p class="language"><a href="https://www.tvmaze.com/shows/56475/masterchef-india"
+                        target="_blank">OFFICIAL SITE </a><br></p>
+            </div>
+        </div>
+
+        <div class="eachShowDiv" style="--color:rgb(136, 204, 102);">
+            <img class="poster" src="https://static.tvmaze.com/uploads/images/medium_portrait/187/468228.jpg">
+            <div class="detailsDiv" onclick="goto('https://www.tvmaze.com/shows/41301/inui')">
+                <p class="titleName"><span>NAME</span><br>Inui</p>
+
+                <p class="language"><span>LANGUAGE</span><br>German</p>
+                <p class="language"><a href="https://www.tvmaze.com/shows/41301/inui" target="_blank">OFFICIAL SITE
+                    </a><br></p>
+            </div>
+        </div>
+
+        <div class="eachShowDiv" style="--color:rgb(140, 204, 102);">
+            <img class="poster" src="https://static.tvmaze.com/uploads/images/medium_portrait/129/323441.jpg">
+            <div class="detailsDiv" onclick="goto('https://www.tvmaze.com/shows/32383/siyah-inci')">
+                <p class="titleName"><span>NAME</span><br>Siyah İnci</p>
+
+                <p class="language"><span>LANGUAGE</span><br>Turkish</p>
+                <p class="language"><a href="https://www.tvmaze.com/shows/32383/siyah-inci" target="_blank">OFFICIAL
+                        SITE </a><br></p>
+            </div>
+        </div>
+
+        <div class="eachShowDiv" style="--color:rgb(102, 204, 188);">
+            <img class="poster" src="https://static.tvmaze.com/uploads/images/medium_portrait/241/604000.jpg">
+            <div class="detailsDiv" onclick="goto('https://www.tvmaze.com/shows/23006/andi-mack')">
+                <p class="titleName"><span>NAME</span><br>Andi Mack</p>
+                <p class="language"><span>Genres</span><br>7.3</p>
+                <p class="language"><span>LANGUAGE</span><br>English</p>
+                <p class="language"><a href="https://www.tvmaze.com/shows/23006/andi-mack" target="_blank">OFFICIAL SITE
+                    </a><br></p>
+            </div>
+        </div>
+
+        <div class="eachShowDiv" style="--color:rgb(102, 110, 204);">
+            <img class="poster" src="https://static.tvmaze.com/uploads/images/medium_portrait/500/1250234.jpg">
+            <div class="detailsDiv" onclick="goto('https://www.tvmaze.com/shows/74036/inci-taneleri')">
+                <p class="titleName"><span>NAME</span><br>İnci Taneleri</p>
+
+                <p class="language"><span>LANGUAGE</span><br>Turkish</p>
+                <p class="language"><a href="https://www.tvmaze.com/shows/74036/inci-taneleri" target="_blank">OFFICIAL
+                        SITE </a><br></p>
+            </div>
+        </div>
+
+        <div class="eachShowDiv" style="--color:rgb(204, 105, 102);">
+            <img class="poster" src="https://static.tvmaze.com/uploads/images/medium_portrait/145/364366.jpg">
+            <div class="detailsDiv" onclick="goto('https://www.tvmaze.com/shows/34853/wildest-india')">
+                <p class="titleName"><span>NAME</span><br>Wildest India</p>
+
+                <p class="language"><span>LANGUAGE</span><br>English</p>
+                <p class="language"><a href="https://www.tvmaze.com/shows/34853/wildest-india" target="_blank">OFFICIAL
+                        SITE </a><br></p>
+            </div>
+        </div>
+
+        <div class="eachShowDiv" style="--color:rgb(180, 102, 204);">
+            <img class="poster" src="https://static.tvmaze.com/uploads/images/medium_portrait/125/313407.jpg">
+            <div class="detailsDiv" onclick="goto('https://www.tvmaze.com/shows/31410/floyds-india')">
+                <p class="titleName"><span>NAME</span><br>Floyd's India</p>
+
+                <p class="language"><span>LANGUAGE</span><br>English</p>
+                <p class="language"><a href="https://www.tvmaze.com/shows/31410/floyds-india" target="_blank">OFFICIAL
+                        SITE </a><br></p>
+            </div>
+        </div>
+
+        <div class="eachShowDiv" style="--color:rgb(204, 102, 149);">
+            <img class="poster" src="https://static.tvmaze.com/uploads/images/medium_portrait/450/1125836.jpg">
+            <div class="detailsDiv" onclick="goto('https://www.tvmaze.com/shows/65650/100-days-to-indy')">
+                <p class="titleName"><span>NAME</span><br>100 Days to Indy</p>
+
+                <p class="language"><span>LANGUAGE</span><br>English</p>
+                <p class="language"><a href="https://www.tvmaze.com/shows/65650/100-days-to-indy"
+                        target="_blank">OFFICIAL SITE </a><br></p>
+            </div>
+        </div>
+
+        <div class="eachShowDiv" style="--color:rgb(172, 204, 102);">
+            <img class="poster" src="https://static.tvmaze.com/uploads/images/medium_portrait/506/1266176.jpg">
+            <div class="detailsDiv" onclick="goto('https://www.tvmaze.com/shows/56668/shark-tank-india')">
+                <p class="titleName"><span>NAME</span><br>Shark Tank India</p>
+
+                <p class="language"><span>LANGUAGE</span><br>Hindi</p>
+                <p class="language"><a href="https://www.tvmaze.com/shows/56668/shark-tank-india"
+                        target="_blank">OFFICIAL SITE </a><br></p>
+            </div>
+        </div>
+
+        <div class="eachShowDiv" style="--color:rgb(102, 204, 176);">
+            <img class="poster" src="https://static.tvmaze.com/uploads/images/medium_portrait/269/674323.jpg">
+            <div class="detailsDiv" onclick="goto('https://www.tvmaze.com/shows/49915/bad-boy-billionaires-india')">
+                <p class="titleName"><span>NAME</span><br>Bad Boy Billionaires: India</p>
+
+                <p class="language"><span>LANGUAGE</span><br>English</p>
+                <p class="language"><a href="https://www.tvmaze.com/shows/49915/bad-boy-billionaires-india"
+                        target="_blank">OFFICIAL SITE </a><br></p>
+            </div>
+        </div>
+
+        <div class="eachShowDiv" style="--color:rgb(102, 204, 133);">
+            <img class="poster" src="https://static.tvmaze.com/uploads/images/medium_portrait/47/119866.jpg">
+            <div class="detailsDiv" onclick="goto('https://www.tvmaze.com/shows/13997/murder-in-mind')">
+                <p class="titleName"><span>NAME</span><br>Murder in Mind</p>
+
+                <p class="language"><span>LANGUAGE</span><br>English</p>
+                <p class="language"><a href="https://www.tvmaze.com/shows/13997/murder-in-mind" target="_blank">OFFICIAL
+                        SITE </a><br></p>
+            </div>
+        </div>
+
+        <div class="eachShowDiv" style="--color:rgb(102, 102, 204);">
+            <img class="poster" src="https://static.tvmaze.com/uploads/images/medium_portrait/247/619668.jpg">
+            <div class="detailsDiv" onclick="goto('https://www.tvmaze.com/shows/46867/wind-and-cloud')">
+                <p class="titleName"><span>NAME</span><br>Wind and Cloud</p>
+
+                <p class="language"><span>LANGUAGE</span><br>Chinese</p>
+                <p class="language"><a href="https://www.tvmaze.com/shows/46867/wind-and-cloud" target="_blank">OFFICIAL
+                        SITE </a><br></p>
+            </div>
+        </div>
+
+        <div class="eachShowDiv" style="--color:rgb(102, 204, 165);">
+            <img class="poster" src="https://static.tvmaze.com/uploads/images/medium_portrait/50/127494.jpg">
+            <div class="detailsDiv" onclick="goto('https://www.tvmaze.com/shows/14963/happiness-in-the-wind')">
+                <p class="titleName"><span>NAME</span><br>Happiness in the Wind</p>
+
+                <p class="language"><span>LANGUAGE</span><br>Korean</p>
+                <p class="language"><a href="https://www.tvmaze.com/shows/14963/happiness-in-the-wind"
+                        target="_blank">OFFICIAL SITE </a><br></p>
+            </div>
+        </div>
+
+        <div class="eachShowDiv" style="--color:rgb(197, 102, 204);">
+            <img class="poster" src="https://static.tvmaze.com/uploads/images/medium_portrait/357/893276.jpg">
+            <div class="detailsDiv" onclick="goto('https://www.tvmaze.com/shows/51996/colin-in-black-white')">
+                <p class="titleName"><span>NAME</span><br>Colin in Black &amp; White</p>
+
+                <p class="language"><span>LANGUAGE</span><br>English</p>
+                <p class="language"><a href="https://www.tvmaze.com/shows/51996/colin-in-black-white"
+                        target="_blank">OFFICIAL SITE </a><br></p>
+            </div>
+        </div>
+
+        <div class="eachShowDiv" style="--color:rgb(102, 204, 163);">
+            <img class="poster" src="https://static.tvmaze.com/uploads/images/medium_portrait/256/640157.jpg">
+            <div class="detailsDiv" onclick="goto('https://www.tvmaze.com/shows/47397/wind-clouds-and-rain')">
+                <p class="titleName"><span>NAME</span><br>Wind, Clouds and Rain</p>
+
+                <p class="language"><span>LANGUAGE</span><br>Korean</p>
+                <p class="language"><a href="https://www.tvmaze.com/shows/47397/wind-clouds-and-rain"
+                        target="_blank">OFFICIAL SITE </a><br></p>
+            </div>
+        </div>
+
+        <div class="eachShowDiv" style="--color:rgb(154, 204, 102);">
+            <img class="poster" src="https://static.tvmaze.com/uploads/images/medium_portrait/491/1229398.jpg">
+            <div class="detailsDiv" onclick="goto('https://www.tvmaze.com/shows/72198/carol-the-end-of-the-world')">
+                <p class="titleName"><span>NAME</span><br>Carol &amp; The End of the World</p>
+
+                <p class="language"><span>LANGUAGE</span><br>English</p>
+                <p class="language"><a href="https://www.tvmaze.com/shows/72198/carol-the-end-of-the-world"
+                        target="_blank">OFFICIAL SITE </a><br></p>
+            </div>
+        </div>
+
+        <div class="eachShowDiv" style="--color:rgb(204, 102, 182);">
+            <img class="poster" src="https://static.tvmaze.com/uploads/images/medium_portrait/320/802288.jpg">
+            <div class="detailsDiv" onclick="goto('https://www.tvmaze.com/shows/4439/24-hours-in-ae')">
+                <p class="titleName"><span>NAME</span><br>24 Hours in A&amp;E</p>
+                <p class="language"><span>Genres</span><br>6.7</p>
+                <p class="language"><span>LANGUAGE</span><br>English</p>
+                <p class="language"><a href="https://www.tvmaze.com/shows/4439/24-hours-in-ae" target="_blank">OFFICIAL
+                        SITE </a><br></p>
+            </div>
+        </div>
+
+        <div class="eachShowDiv" style="--color:rgb(177, 102, 204);">
+            <img class="poster" src="https://static.tvmaze.com/uploads/images/medium_portrait/483/1208949.jpg">
+            <div class="detailsDiv" onclick="goto('https://www.tvmaze.com/shows/2942/childhoods-end')">
+                <p class="titleName"><span>NAME</span><br>Childhood's End</p>
+                <p class="language"><span>Genres</span><br>7.5</p>
+                <p class="language"><span>LANGUAGE</span><br>English</p>
+                <p class="language"><a href="https://www.tvmaze.com/shows/2942/childhoods-end" target="_blank">OFFICIAL
+                        SITE </a><br></p>
+            </div>
+        </div>
+
+        <div class="eachShowDiv" style="--color:rgb(135, 204, 102);">
+            <img class="poster" src="https://static.tvmaze.com/uploads/images/medium_portrait/470/1177412.jpg">
+            <div class="detailsDiv" onclick="goto('https://www.tvmaze.com/shows/37107/find-me-in-paris')">
+                <p class="titleName"><span>NAME</span><br>Find Me in Paris</p>
+                <p class="language"><span>Genres</span><br>7.7</p>
+                <p class="language"><span>LANGUAGE</span><br>English</p>
+                <p class="language"><a href="https://www.tvmaze.com/shows/37107/find-me-in-paris"
+                        target="_blank">OFFICIAL SITE </a><br></p>
+            </div>
+        </div>
+
+        <div class="eachShowDiv" style="--color:rgb(204, 115, 102);">
+            <img class="poster" src="https://static.tvmaze.com/uploads/images/medium_portrait/206/517280.jpg">
+            <div class="detailsDiv" onclick="goto('https://www.tvmaze.com/shows/42721/60-days-in-narcoland')">
+                <p class="titleName"><span>NAME</span><br>60 Days In: Narcoland</p>
+                <p class="language"><span>Genres</span><br>5.6</p>
+                <p class="language"><span>LANGUAGE</span><br>English</p>
+                <p class="language"><a href="https://www.tvmaze.com/shows/42721/60-days-in-narcoland"
+                        target="_blank">OFFICIAL SITE </a><br></p>
+            </div>
+        </div>
+
+        <div class="eachShowDiv" style="--color:rgb(102, 204, 134);">
+            <img class="poster" src="https://static.tvmaze.com/uploads/images/medium_portrait/8/22035.jpg">
+            <div class="detailsDiv" onclick="goto('https://www.tvmaze.com/shows/510/breaking-in')">
+                <p class="titleName"><span>NAME</span><br>Breaking In</p>
+                <p class="language"><span>Genres</span><br>7.4</p>
+                <p class="language"><span>LANGUAGE</span><br>English</p>
+                <p class="language"><a href="https://www.tvmaze.com/shows/510/breaking-in" target="_blank">OFFICIAL SITE
+                    </a><br></p>
+            </div>
+        </div>
+
+        <div class="eachShowDiv" style="--color:rgb(135, 204, 102);">
+            <img class="poster" src="https://static.tvmaze.com/uploads/images/medium_portrait/195/487717.jpg">
+            <div class="detailsDiv" onclick="goto('https://www.tvmaze.com/shows/38644/pitching-in')">
+                <p class="titleName"><span>NAME</span><br>Pitching In</p>
+                <p class="language"><span>Genres</span><br>7</p>
+                <p class="language"><span>LANGUAGE</span><br>English</p>
+                <p class="language"><a href="https://www.tvmaze.com/shows/38644/pitching-in" target="_blank">OFFICIAL
+                        SITE </a><br></p>
+            </div>
+        </div>
+
+        <div class="eachShowDiv" style="--color:rgb(204, 102, 193);">
+            <img class="poster" src="https://static.tvmaze.com/uploads/images/medium_portrait/21/53091.jpg">
+            <div class="detailsDiv" onclick="goto('https://www.tvmaze.com/shows/4753/in-justice')">
+                <p class="titleName"><span>NAME</span><br>In Justice</p>
+
+                <p class="language"><span>LANGUAGE</span><br>English</p>
+                <p class="language"><a href="https://www.tvmaze.com/shows/4753/in-justice" target="_blank">OFFICIAL SITE
+                    </a><br></p>
+            </div>
+        </div>
+
+        <div class="eachShowDiv" style="--color:rgb(102, 204, 142);">
+            <img class="poster" src="https://static.tvmaze.com/uploads/images/medium_portrait/460/1150238.jpg">
+            <div class="detailsDiv" onclick="goto('https://www.tvmaze.com/shows/68422/in-limbo')">
+                <p class="titleName"><span>NAME</span><br>In Limbo</p>
+                <p class="language"><span>Genres</span><br>4.8</p>
+                <p class="language"><span>LANGUAGE</span><br>English</p>
+                <p class="language"><a href="https://www.tvmaze.com/shows/68422/in-limbo" target="_blank">OFFICIAL SITE
+                    </a><br></p>
+            </div>
+        </div>
+
+        <div class="eachShowDiv" style="--color:rgb(107, 204, 102);">
+            <img class="poster" src="https://static.tvmaze.com/uploads/images/medium_portrait/510/1277348.jpg">
+            <div class="detailsDiv" onclick="goto('https://www.tvmaze.com/shows/75765/in-memoriam')">
+                <p class="titleName"><span>NAME</span><br>In Memoriam</p>
+
+                <p class="language"><span>LANGUAGE</span><br>French</p>
+                <p class="language"><a href="https://www.tvmaze.com/shows/75765/in-memoriam" target="_blank">OFFICIAL
+                        SITE </a><br></p>
+            </div>
+        </div>
+
+        <div class="eachShowDiv" style="--color:rgb(204, 137, 102);">
+            <img class="poster" src="https://static.tvmaze.com/uploads/images/medium_portrait/69/174407.jpg">
+            <div class="detailsDiv" onclick="goto('https://www.tvmaze.com/shows/19740/in-deep')">
+                <p class="titleName"><span>NAME</span><br>In Deep</p>
+
+                <p class="language"><span>LANGUAGE</span><br>English</p>
+                <p class="language"><a href="https://www.tvmaze.com/shows/19740/in-deep" target="_blank">OFFICIAL SITE
+                    </a><br></p>
+            </div>
+        </div>
+
+        <div class="eachShowDiv" style="--color:rgb(204, 102, 154);">
+            <img class="poster" src="https://static.tvmaze.com/uploads/images/medium_portrait/484/1211053.jpg">
+            <div class="detailsDiv" onclick="goto('https://www.tvmaze.com/shows/843/in-treatment')">
+                <p class="titleName"><span>NAME</span><br>In Treatment</p>
+                <p class="language"><span>Genres</span><br>7.4</p>
+                <p class="language"><span>LANGUAGE</span><br>English</p>
+                <p class="language"><a href="https://www.tvmaze.com/shows/843/in-treatment" target="_blank">OFFICIAL
+                        SITE </a><br></p>
+            </div>
+        </div>
+
+        <div class="eachShowDiv" style="--color:rgb(204, 123, 102);">
+            <img class="poster" src="https://static.tvmaze.com/uploads/images/medium_portrait/151/378906.jpg">
+            <div class="detailsDiv" onclick="goto('https://www.tvmaze.com/shows/34064/in-contempt')">
+                <p class="titleName"><span>NAME</span><br>In Contempt</p>
+                <p class="language"><span>Genres</span><br>6.8</p>
+                <p class="language"><span>LANGUAGE</span><br>English</p>
+                <p class="language"><a href="https://www.tvmaze.com/shows/34064/in-contempt" target="_blank">OFFICIAL
+                        SITE </a><br></p>
+            </div>
+        </div>
+
+        <div class="eachShowDiv" style="--color:rgb(102, 132, 204);">
+            <img class="poster" src="https://static.tvmaze.com/uploads/images/medium_portrait/47/118538.jpg">
+            <div class="detailsDiv" onclick="goto('https://www.tvmaze.com/shows/13752/in-conversation')">
+                <p class="titleName"><span>NAME</span><br>In Conversation</p>
+
+                <p class="language"><span>LANGUAGE</span><br>English</p>
+                <p class="language"><a href="https://www.tvmaze.com/shows/13752/in-conversation"
+                        target="_blank">OFFICIAL SITE </a><br></p>
+            </div>
+        </div>
+
+        <div class="eachShowDiv" style="--color:rgb(102, 134, 204);">
+            <img class="poster" src="https://static.tvmaze.com/uploads/images/medium_portrait/207/518786.jpg">
+            <div class="detailsDiv" onclick="goto('https://www.tvmaze.com/shows/43081/i-am')">
+                <p class="titleName"><span>NAME</span><br>I Am...</p>
+                <p class="language"><span>Genres</span><br>7.4</p>
+                <p class="language"><span>LANGUAGE</span><br>English</p>
+                <p class="language"><a href="https://www.tvmaze.com/shows/43081/i-am" target="_blank">OFFICIAL SITE
+                    </a><br></p>
+            </div>
+        </div>
+
+        <div class="eachShowDiv" style="--color:rgb(102, 202, 204);">
+            <img class="poster" src="https://static.tvmaze.com/uploads/images/medium_portrait/115/287519.jpg">
+            <div class="detailsDiv" onclick="goto('https://www.tvmaze.com/shows/27677/elizabeth-i')">
+                <p class="titleName"><span>NAME</span><br>Elizabeth I</p>
+                <p class="language"><span>Genres</span><br>7.3</p>
+                <p class="language"><span>LANGUAGE</span><br>English</p>
+                <p class="language"><a href="https://www.tvmaze.com/shows/27677/elizabeth-i" target="_blank">OFFICIAL
+                        SITE </a><br></p>
+            </div>
+        </div>
+
+        <div class="eachShowDiv" style="--color:rgb(204, 102, 148);">
+            <img class="poster" src="https://static.tvmaze.com/uploads/images/medium_portrait/11/29809.jpg">
+            <div class="detailsDiv" onclick="goto('https://www.tvmaze.com/shows/2127/i-spy')">
+                <p class="titleName"><span>NAME</span><br>I Spy</p>
+
+                <p class="language"><span>LANGUAGE</span><br>English</p>
+                <p class="language"><a href="https://www.tvmaze.com/shows/2127/i-spy" target="_blank">OFFICIAL SITE
+                    </a><br></p>
+            </div>
+        </div>
+
+        <div class="eachShowDiv" style="--color:rgb(168, 204, 102);">
+            <img class="poster" src="https://static.tvmaze.com/uploads/images/medium_portrait/115/287671.jpg">
+            <div class="detailsDiv" onclick="goto('https://www.tvmaze.com/shows/10679/elizabeth-i')">
+                <p class="titleName"><span>NAME</span><br>Elizabeth I</p>
+
+                <p class="language"><span>LANGUAGE</span><br>English</p>
+                <p class="language"><a href="https://www.tvmaze.com/shows/10679/elizabeth-i" target="_blank">OFFICIAL
+                        SITE </a><br></p>
+            </div>
+        </div>
+
+    </div>
+    <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
+    <script type="text/javascript" async=""
+        src="https://www.googletagmanager.com/gtag/js?id=G-NBGQJBJMEG&amp;l=dataLayer&amp;cx=c"></script>
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-85417367-1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="app.js"></script>
+    <script src="https://www.drv.tw/inc/wd.js?s=kbskbj0isbvljmtqzqhvnw"></script>
+    <!-- <div class="footer-basic"> -->
+    <!-- <footer>
+            <div class="social">
+                <a href="https://www.linkedin.com/in/madhur-yadav-6s2002/"><i class="icon ion-social-linkedin"></i></a>
+                <a href="https://github.com/madhurydv"><i class="icon ion-social-twitter"></i></a>
+                <a href="https://twitter.com/Mad_fkn_hur"><i class="icon ion-social-github"></i></a>
+            </div>
+        </footer> -->
+    <!-- </div> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
