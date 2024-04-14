@@ -45,13 +45,13 @@ function getRandomGreeting() {
 showmassage(getRandomGreeting(), 2000);
 
 
-form.addEventListener('input', async e => {
+form.addEventListener('submit', async e => {
 
     e.preventDefault();
     const searchTerm = form.elements.query.value;
     if (searchTerm == "") {
         imgs.innerHTML = " ";
-        totalResults = 0;
+        uniqueResults.clear();
         return showmassage(getRandomNoDataMessage(), 4000);
     }
     const config = { params: { q: searchTerm } };
@@ -63,38 +63,39 @@ form.addEventListener('input', async e => {
     // form.elements.query.value = '';
 })
 
-form.elements.query.addEventListener('keypress', function (e) {
-    if (e.key === 'Enter') {
-        e.preventDefault(); // Prevent form submission if Enter key is pressed
-    }
-});
-
-
+// form.elements.query.addEventListener('keypress', function (e) {
+//     if (e.key === 'Enter') {
+//         e.preventDefault(); // Prevent form submission if Enter key is pressed
+//     }
+// });
+const uniqueResults = new Set(); // Initialize a Set to store unique results
 
 const showImg = (details) => {
     if (details.length > 0) {
-        totalResults += details.length;
         showmassage(getRandomMessage(), 10000);
 
         let newResultHTML = "";
         removeAllChildNodes(imgs);
 
-
         for (let result of details) {
             if (result.show.image) {
+                // Check if the result is already in the set
+                if (!uniqueResults.has(result.show.id)) {
+                    // Add the result to the set if it's not already present
+                    uniqueResults.add(result.show.id);
 
-                // Creating HTML for each show
-                newResultHTML += `
-                
-                    <div class="eachShowDiv" style="--color:${getRandomColor()};">
-                        <img class="poster" src="${result.show.image.medium}">
-                        <div class="detailsDiv" onclick="goto('${result.show.url}')" >
-                            <p class="titleName"><span>NAME</span><br>${result.show.name}</p>
-                            ${result.show.rating.average ? `<p class="language"><span>Genres</span><br>${result.show.rating.average}</p>` : ''}
-                            ${result.show.language ? `<p class="language"><span>LANGUAGE</span><br>${result.show.language}</p>` : ''}
-                            ${result.show.url ? `<p class="language"><a href="${result.show.url}" target="_blank">OFFICIAL SITE </a><br></p>` : ''}
-                        </div>
-                    </div>`;
+                    // Creating HTML for each show
+                    newResultHTML += `
+                        <div class="eachShowDiv" style="--color:${getRandomColor()};" data-id="${result.show.id}">
+                            <img class="poster" src="${result.show.image.medium}">
+                            <div class="detailsDiv" onclick="goto('${result.show.url}')">
+                                <p class="titleName"><span>NAME</span><br>${result.show.name}</p>
+                                ${result.show.rating.average ? `<p class="language"><span>RATING</span><br>${result.show.rating.average}</p>` : ''}
+                                ${result.show.language ? `<p class="language"><span>LANGUAGE</span><br>${result.show.language}</p>` : ''}
+                                ${result.show.url ? `<p class="language"><a href="${result.show.url}" target="_blank">OFFICIAL SITE </a><br></p>` : ''}
+                            </div>
+                        </div>`;
+                }
             }
         }
 
@@ -108,15 +109,10 @@ const showImg = (details) => {
         previousResult = newResultHTML;
 
         effect();
-
-
-    }
-    else {
+    } else {
         showmassage(getRandomNoDataMessage(), 4000);
-
     }
 }
-
 function showmassage(massage, time) {
     if (document.querySelector(".massage").innerHTML == '' || document.querySelector(".massage").innerHTML == ' ') {
 
@@ -126,6 +122,10 @@ function showmassage(massage, time) {
         }, time);
     }
 }
+
+setInterval(() => {
+    showmassage("Try CINEMA+ by clicking on सिनेमा :)",5000);
+}, 10000)
 
 function goto(link) {
     const newTab = window.open();
